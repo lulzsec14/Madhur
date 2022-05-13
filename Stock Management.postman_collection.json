@@ -1,0 +1,518 @@
+{
+	"info": {
+		"_postman_id": "5be2d81f-8763-421a-ae9b-b5681f4a3703",
+		"name": "Stock Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegisterAdmin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"name\": \"Sourav\",\n        \"email\": \"sourav121420@gmail.com\",\n        \"password\": \"Password@2468\",\n        \"phoneNo\": \"8968613112\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/registerAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"registerAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"email\": \"sourav121420@gmail.com\",\n        \"password\": \"Password@2468\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/loginAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"loginAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyAdminEmail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/verify-email/ac5899cfbeac80fb7da18c91c16acc7a998ff0d8dc2064b55090fa23ec2bb94ca46f6f500e871f97f2fca1fd78d0f69d922553ccf52dbea6877befb6fe08c4ffe7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"verify-email",
+						"ac5899cfbeac80fb7da18c91c16acc7a998ff0d8dc2064b55090fa23ec2bb94ca46f6f500e871f97f2fca1fd78d0f69d922553ccf52dbea6877befb6fe08c4ffe7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Stock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"name\": \"AphaX\",\n        \"category\": \"Electronics\",\n        \"seller\": {\n            \"name\": \"XYZ\",\n            \"address\": \"House no 26 Anandnagar Kharar Mohali\",\n            \"phoneNo\": \"8968613050\"\n        },\n        \"amount\": 12563,\n        \"quantity\": 9,\n        \"paymentMode\": \"Cash\",\n        \"transactionId\": \"d11879fb492ff2390ea90d86b9aec419e6fc9bca\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/createNewStock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"createNewStock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"category\": \"Stationary\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/createCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"createCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Stock Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"stockId\": \"2334e7cf-aa52-433a-ba34-cd3417164abb\",\n        \"dataToUpdate\": {\n            \"name\": \"AlphaX\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/updateStockDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"updateStockDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sell Stock",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"stockId\": \"2334e7cf-aa52-433a-ba34-cd3417164abb\",\n        \"amount\": 50000,\n        \"quantity\": 4,\n        \"paymentMode\": \"Cheque\",\n        \"transactionId\": \"d11879fb492ff2390ea90d86b9aec419e6fc9bcz\",\n        \"customer\": {\n            \"name\": \"Mananjay\",\n            \"address\": \"HR31 Jind aale\",\n            \"phoneNo\": \"8968613001\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/sellStock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"sellStock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Stocks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/getCurrentStocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"getCurrentStocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Purchased Stocks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/getPurchasedStocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"getPurchasedStocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSoldStocks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/getSoldStocks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"getSoldStocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payments Made",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/getPaymentsMade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"getPaymentsMade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Payments Recieved",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/getPaymentsRecieved",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"getPaymentsRecieved"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Email Verification",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/getEmailVerification?email=sourav121420@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"getEmailVerification"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sourav121420@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"email\": \"sourav121420@gmail.com\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/forgotPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"forgotPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\": {\n        \"password\": \"Password@2468\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/passwordReset/:resetToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"passwordReset",
+						":resetToken"
+					],
+					"variable": [
+						{
+							"key": "resetToken",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout Admin",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/admin/logoutAdmin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"logoutAdmin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Admin Details",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"data\":{\n        \"email\": \"sourav121420@gmail.com\",\n        \"dataToUpdate\": {\n            \"name\": \"Somaksh\"\n        }\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/admin/updateAdminDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"admin",
+						"updateAdminDetails"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
